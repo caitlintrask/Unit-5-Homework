@@ -12,18 +12,20 @@ newDate = month[dateObj.getMonth()] + " " + day + "," + " " + year;
 $("#current-day").append(newDate);
 console.log(newDate);
 
+// create function for clicke event to live
+$(document).ready(function(){
 
-// save inputs to local storage
-// set variables
-// on click, console.log input value
-// var scheduleInput=$("#schedule-text");
-var saveBtn=$("#save-div");
-
-saveBtn.click(function(){
-    event.preventDefault();
-
-    var scheduleText=$("#schedule-text").val();
-    console.log(scheduleText);
-
-    localStorage.getItem(scheduleText);
+// on click - save input to console
+  
+  $("#save-div").click(function() {
+  var scheduleInput=$("#schedule-text").val();
+  event.preventDefault();
+  console.log(scheduleInput);
+  
+  // on click - save input to local storage
+  window.localStorage.setItem("input",scheduleInput);
+  console.log(localStorage.input);
+  // when page is refreshed, load object saved from local storage to input 
+  })
 })
+
