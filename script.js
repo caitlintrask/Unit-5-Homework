@@ -35,8 +35,8 @@ console.log(m.format('hA'));
 console.log(currentTime);
 
 
-firsthour.append(m.format("8A"));
-secondhour.append(m.format("9A"));
+firsthour.append(m.format("8")+"AM");
+secondhour.append(m.format("9")+"AM");
 thirdhour.append(m.format("10")+"AM");
 fourthhour.append(m.format("11")+"AM");
 fifthhour.append(m.format("12")+"PM");
